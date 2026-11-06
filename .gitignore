@@ -10,7 +10,6 @@ vite.config.*.timestamp-*
 *-debug.log*
 logs/
 *.log
-.claude-replay.*
 .tmp-*
 
 # Model Checkpoints & Large Weights (XLM-RoBERTa / PyTorch)
@@ -43,6 +42,4 @@ data/*.db
 .bentoml/
 bentoml/
 
-# Platform state
-/.plugins/
-/.opencode-skills/
+
