@@ -107,7 +107,7 @@ function Directory() {
         <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search cafés, neighborhoods, or drinks"/>
         <button><Icon name="map" size={18}/> Davao City</button>
       </div>
-      <div className="hero-note"><span>{cafesList.length}</span> establishments catalogued &nbsp;·&nbsp; Live data sync</div>
+      <div className="hero-note"><span>{cafesList.length}</span> establishments catalogued &nbsp;·&nbsp; Based on reviews gathered in March 2027 via Google Maps</div>
     </section>
 
     <section className="content">
@@ -248,7 +248,7 @@ function Insights() {
     </div>
     <div className="stat-grid">
       {[
-        [stats.reviews_analyzed, 'Reviews analyzed', 'Dataset synced'],
+        [stats.reviews_analyzed, 'Reviews analyzed', 'Google Maps · Mar 2027'],
         [stats.establishments, 'Establishments', 'Verified'],
         [stats.positive_sentiment, 'Positive sentiment', 'From SQLite DB'],
         [stats.avg_response, 'Avg. model response', 'Live']
@@ -460,6 +460,6 @@ export default function App() {
       <div className="header-right"><span><i/> MODEL ONLINE</span><button onClick={() => setTab('insights')}>For café owners <Icon name="arrow" size={16}/></button></div>
     </header>
     {tab === 'discover' ? <Directory/> : tab === 'insights' ? <Insights/> : <Lab/>}
-    <footer><span className="brand"><span>timpla</span><i/></span><p>Local coffee, understood better.</p><small>Research prototype · Davao City, Philippines</small></footer>
+    <footer><span className="brand"><span>timpla</span><i/></span><p>Local coffee, understood better.</p><small>Research prototype · Based on reviews gathered in March 2027 via Google Maps · Davao City, Philippines</small></footer>
   </div>
 }
